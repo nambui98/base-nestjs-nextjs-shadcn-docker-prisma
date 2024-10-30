@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:13.5
+    restart: always
+    environment:
+      POSTGRES_USER: nambv
+      POSTGRES_PASSWORD: nambv123123
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+volumes:
+  postgres:
